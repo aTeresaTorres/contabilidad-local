@@ -456,3 +456,127 @@ header h1 {
         padding: 14px;
     }
 }
+
+/* ===== HISTORIAL - HEADER ===== */
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.history-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1c1b1f;
+}
+
+/* ===== SELECTOR DE MES ===== */
+.month-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.month-selector label {
+    font-size: 13px;
+    color: #49454f;
+    font-weight: 500;
+}
+
+.month-selector select {
+    padding: 8px 14px;
+    border: 1.5px solid #cac4d0;
+    border-radius: 12px;
+    font-size: 14px;
+    background: white;
+    color: #1c1b1f;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    appearance: auto;
+}
+
+.month-selector select:hover {
+    border-color: #6750a4;
+}
+
+.month-selector select:focus {
+    outline: none;
+    border-color: #6750a4;
+    box-shadow: 0 0 0 2px rgba(103, 80, 164, 0.2);
+}
+
+/* ===== INFO DEL MES ===== */
+.history-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4px 12px 4px;
+    border-bottom: 1px solid #ece6f0;
+    margin-bottom: 8px;
+}
+
+#monthInfo {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c1b1f;
+}
+
+#movementCount {
+    font-size: 13px;
+    color: #79747e;
+}
+
+/* ===== BOTÓN ELIMINAR ===== */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #79747e;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+    background: #ffdad6;
+    color: #ba1a1a;
+    transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .history-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .month-selector {
+        flex-wrap: wrap;
+    }
+    
+    .month-selector select {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .history-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
+/* Información adicional del balance */
+#balanceInfo {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 8px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}

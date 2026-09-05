@@ -74,7 +74,11 @@
             <div class="result-card" id="resultCard">
                 <h2>Resultado General</h2>
                 <div class="result-number" id="totalBalance">$0.00</div>
-                <p id="resultStatus">En verde</p>
+                <p id="resultStatus">📈 En verde</p>
+                <!-- 👇 NUEVO: Información adicional del balance -->
+                <p id="balanceInfo" style="font-size:13px; opacity:0.75; margin-top:8px;">
+                    0 movimientos en 0 meses
+                </p>
             </div>
 
             <!-- BOTONES DE REGISTRO -->
@@ -91,7 +95,24 @@
 
             <!-- HISTORIAL DE MOVIMIENTOS -->
             <div class="history-section">
-                <h3>Historial de movimientos</h3>
+                <div class="history-header">
+                    <h3>📜 Historial de movimientos</h3>
+                    
+                    <!-- 👇 SELECTOR DE MES -->
+                    <div class="month-selector">
+                        <label for="monthFilter">Filtrar por mes:</label>
+                        <select id="monthFilter" onchange="changeMonth()">
+                            <!-- Los meses se llenan automáticamente con JavaScript -->
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- 👇 INFORMACIÓN DEL MES -->
+                <div class="history-info">
+                    <span id="monthInfo">Enero 2024</span>
+                    <span id="movementCount">0 movimientos</span>
+                </div>
+                
                 <div id="movementsList"></div>
             </div>
         </div>
